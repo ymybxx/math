@@ -128,13 +128,15 @@ public class Sort {
 
     @Test
     public  void testAlgorithm() {
-        List list = getRandomList(500, 1000);
+        List list = getRandomList(55000, 55000);
+        List list1 = new ArrayList(list);
+        List list2 = new ArrayList(list);
         System.out.println("insert");
         testInsertSort(list);
         System.out.println("shell");
-        testShellSort(list);
+        testShellSort(list1);
         System.out.println("quick");
-        testQucikSort(list);
+        testQucikSort(list2);
     }
 
 
