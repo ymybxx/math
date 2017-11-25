@@ -10,7 +10,7 @@ import java.util.Random;
 /***
  * 插入排序
  */
-public class Sort {
+public class  Sort {
 
 
 
@@ -20,6 +20,60 @@ public class Sort {
 
     }
 
+
+    public void testMergeSort(List<Integer> list) {
+        double start = System.nanoTime();
+        mergeSort(list,0, list.size() /2 ,list.size() - 1);
+        System.out.println(list);
+        double end = System.nanoTime();
+        System.out.println("time :" + (end - start));
+
+    }
+
+
+    public void mergeSort(List<Integer> list, int left, int mid, int right) {
+        if (left < right-1) {
+            mergeSort(list, left, (left + mid) / 2, mid);
+            mergeSort(list,mid+1,(mid + right) /2,right);
+        }
+        sSrot(list,left,mid,right);
+    }
+    @Test
+    public void testSSort() {
+        List<Integer> l1 = new ArrayList<Integer>();
+        l1.add(9);
+        l1.add(2);
+        sSrot(l1,0,0,1);
+        System.out.println(l1);
+
+    }
+
+
+    //mid是left的最后一个元素
+    public void sSrot(List<Integer> list, int left, int mid, int right) {
+        List<Integer> tmpList = new ArrayList<Integer>();
+        int l = left;
+        int r = mid + 1;
+        while (l <= mid && r <= right) {
+            if (list.get(l) <= list.get(r)) {
+                tmpList.add(list.get(l++));
+            } else {
+                tmpList.add(list.get(r++));
+            }
+        }
+
+        while (l <= mid) {
+            tmpList.add(list.get(l++));
+        }
+        while (r <= right) {
+            tmpList.add(list.get(r++));
+        }
+
+        int i = left;
+        for (int now : tmpList) {
+            list.set(i++, now);
+        }
+    }
     @Test
 
     public void testList() {
@@ -127,15 +181,21 @@ public class Sort {
 
     @Test
     public  void testAlgorithm() {
-        List list = getRandomList(55000, 55000);
+        List list = getRandomList(50000, 50000);
         List list1 = new ArrayList(list);
         List list2 = new ArrayList(list);
+        List list3 = new ArrayList(list);
         System.out.println("insert");
         testInsertSort(list);
         System.out.println("shell");
         testShellSort(list1);
         System.out.println("quick");
         testQucikSort(list2);
+        //40232
+        //02324
+        System.out.println("merge");
+        testMergeSort(list3);
+        System.out.println(list3);
     }
 
 
