@@ -5,6 +5,12 @@ import org.junit.Test;
 class Solution {
 
 
+    @Test
+    public void test() {
+        System.out.println("dada");
+    }
+
+
     public static void main(String[] args) {
         System.out.println(longestPalindrome("abbbbbbbba"));
     }
