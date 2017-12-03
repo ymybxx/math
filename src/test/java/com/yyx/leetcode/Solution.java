@@ -19,6 +19,7 @@ class Solution {
         boolean[][] booleans = new boolean[s.length()][s.length()];
         int longBegin = 0;
 
+
         for(int i = 0; i < s.length(); i++) {
             booleans[i][i]  = true;
             max = 1;
