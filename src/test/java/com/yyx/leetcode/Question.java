@@ -12,8 +12,61 @@ public class Question {
     public static void main(String[] args) {
         int[] height = new int[]{1, 1};
         System.out.println();
+        String s = "abcdefg";
+
     }
 
+    public ListNode swapPairs(ListNode head) {
+        if (head == null && head.next == null) {
+            return head;
+        }
+        //第一组进行交换
+        ListNode p = head.next;
+        head.next = head.next.next;
+        p.next = head;
+        head = p;
+
+
+        //后续循环操作
+        p = p.next;//第三个元素
+        while (p.next != null && p.next.next != null) {
+            ListNode now_node = p.next;
+            ListNode next_node = p.next.next;
+            now_node.next = next_node.next;
+            next_node.next = now_node;
+            p.next = next_node;
+            p = now_node;
+        }
+
+        return head;
+
+    }
+
+
+    @Test
+    public void testGen() {
+        List<String> list = generateParenthesis(3);
+        System.out.println(list);
+    }
+    public List<String> generateParenthesis(int n) {
+        List<String> list = new ArrayList<String>();
+        String s = "";
+        genPar(list, s,n, n);
+        return list;
+    }
+
+    public void  genPar(List<String> re,String s, int left, int right) {
+       if(left == 0 && right ==0){
+           re.add(s);
+       }
+
+        if (left > 0) {
+            genPar(re,s + "(",left - 1, right);
+        }
+        if (right > left) {
+            genPar(re,s + ")", left,right-1);
+        }
+    }
 
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         ListNode head = null;
@@ -214,6 +267,56 @@ public class Question {
         }
         return target+close;
 
+    }
+
+    @Test
+    public void testFourSum() {
+        int[] nums = new int[]{1, 0, -1, 0, -2, 2};
+        List<List<Integer>> lists = fourSum(nums, 0);
+        System.out.println(lists);
+
+    }
+
+    public List<List<Integer>> fourSum(int[] nums, int target) {
+        List<List<Integer>> lists = new ArrayList<List<Integer>>();
+        Arrays.sort(nums);
+        int length = nums.length;
+        for(int i = 0; i < length; i++) {
+            if(i > 0 && nums[i] == nums[i - 1]) continue;
+
+            int left = i + 1;
+            int right = length - 1;
+            threeSumdForFour(lists,nums,left,right,nums[i],target);
+        }
+        return lists;
+    }
+
+
+    public void threeSumdForFour(List<List<Integer>> lists,int[] nums, int begin, int end, int first,int target) {
+        int length = end + 1;
+        //
+
+        for (int i = begin; i < length - 1; i++) {
+            if (i > begin && nums[i] == nums[i-1]) continue;
+            int left = i+1, right = length - 1;
+            int current = target - first - nums[i];
+            while (left < right) {
+                //-1 -2 -2 -4 0 1 2 2 3 4
+                if (nums[left] + nums[right] == current) {
+                    lists.add(Arrays.asList(first,nums[i], nums[left], nums[right]));
+                    while ( left <right && nums[left] == nums[left+1] ) left++;
+                    while(left < right && nums[right] == nums[right-1] ) right--;
+                    left++;
+                    right--;
+                } else if (nums[left] + nums[right] < current) {
+                    while ( left <right && nums[left] == nums[left+1] ) left++;
+                    left++;
+                } else {
+                    while(left < right && nums[right] == nums[right-1] ) right--;
+                    right--;
+                }
+            }
+        }
     }
     /**
      * 参考后精简
