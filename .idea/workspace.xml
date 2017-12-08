@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59eb6a2c-193a-47ab-b45a-aad3f804ab46" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/yyx/leetcode/Question$ListNode.class" afterPath="$PROJECT_DIR$/target/test-classes/com/yyx/leetcode/Question$ListNode.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/yyx/leetcode/Question.class" afterPath="$PROJECT_DIR$/target/test-classes/com/yyx/leetcode/Question.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/yyx/leetcode/Question.java" afterPath="$PROJECT_DIR$/src/test/java/com/yyx/leetcode/Question.java" />
@@ -17,41 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="ReverseInt.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yyx/leet/ReverseInt.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="17" column="21" lean-forward="false" selection-start-line="12" selection-start-column="7" selection-end-line="17" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/yyx/leetcode/Solution.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NativeMethodAccessorImpl.class" pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/yyx/leetcode/Test.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+            <state relative-caret-position="375">
+              <caret line="26" column="17" lean-forward="false" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -60,7 +31,7 @@
       <file leaf-file-name="ArrayList.java" pinned="false" current-in-tab="false">
         <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/src.zip!/java/util/ArrayList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
+            <state relative-caret-position="15">
               <caret line="297" column="60" lean-forward="false" selection-start-line="297" selection-start-column="54" selection-end-line="297" selection-end-column="60" />
               <folding />
             </state>
@@ -70,22 +41,106 @@
       <file leaf-file-name="Question.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/yyx/leetcode/Question.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="18" column="4" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="42" selection-end-column="5" />
+            <state relative-caret-position="331">
+              <caret line="39" column="13" lean-forward="false" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1205#1213#0" expanded="true" />
-                <element signature="e#2593#2604#0" expanded="true" />
-                <element signature="e#4369#4377#0" expanded="true" />
-                <element signature="e#6009#6024#0" expanded="true" />
-                <element signature="e#7676#7691#0" expanded="true" />
-                <element signature="e#9438#9453#0" expanded="true" />
-                <element signature="e#10569#10584#0" expanded="true" />
-                <element signature="e#10685#10694#0" expanded="true" />
-                <element signature="e#11577#11586#0" expanded="true" />
-                <element signature="e#12178#12193#0" expanded="true" />
-                <element signature="e#13325#13334#0" expanded="true" />
+                <element signature="e#4622#4630#0" expanded="true" />
+                <element signature="e#6010#6021#0" expanded="true" />
+                <element signature="e#7786#7794#0" expanded="true" />
+                <element signature="e#9426#9441#0" expanded="true" />
+                <element signature="e#11093#11108#0" expanded="true" />
+                <element signature="e#12855#12870#0" expanded="true" />
+                <element signature="e#13986#14001#0" expanded="true" />
+                <element signature="e#14102#14111#0" expanded="true" />
+                <element signature="e#14994#15003#0" expanded="true" />
+                <element signature="e#15595#15610#0" expanded="true" />
+                <element signature="e#16742#16751#0" expanded="true" />
+                <marker date="1512708406957" expanded="false" signature="7636:7647" ph=" { " />
+                <marker date="1512708406957" expanded="false" signature="7672:7678" ph=" }" />
+                <marker date="1512708406957" expanded="false" signature="19746:19757" ph=" { " />
+                <marker date="1512708406957" expanded="false" signature="19783:19789" ph=" }" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Arrays.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/src.zip!/java/util/Arrays.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="127">
+              <caret line="166" column="23" lean-forward="false" selection-start-line="166" selection-start-column="23" selection-end-line="166" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FrameworkMethod.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.10/junit-4.10.jar!/org/junit/runners/model/FrameworkMethod.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <folding>
+                <element signature="e#728#922#0" expanded="true" />
+                <element signature="e#921#922#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReflectiveCallable.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.10/junit-4.10.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InvokeMethod.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.10/junit-4.10.jar!/org/junit/internal/runners/statements/InvokeMethod.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ParentRunner.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.10/junit-4.10.jar!/org/junit/runners/ParentRunner.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="111">
+              <caret line="190" column="0" lean-forward="false" selection-start-line="190" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
+              <folding>
+                <element signature="e#1904#1905#0" expanded="true" />
+                <element signature="e#1956#1957#0" expanded="true" />
+                <element signature="e#4518#4653#0" expanded="true" />
+                <element signature="e#4652#4653#0" expanded="true" />
+                <element signature="e#4888#5036#0" expanded="true" />
+                <element signature="e#5035#5036#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JUnitCore.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.10/junit-4.10.jar!/org/junit/runner/JUnitCore.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1215">
+              <caret line="110" column="0" lean-forward="false" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BlockJUnit4ClassRunner.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.10/junit-4.10.jar!/org/junit/runners/BlockJUnit4ClassRunner.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -110,9 +165,11 @@
       <find>contain</find>
       <find>contains</find>
       <find>equals</find>
+      <find>dividend</find>
     </findStrings>
     <replaceStrings>
       <replace />
+      <replace>dividend_long</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -186,10 +243,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -289,7 +346,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.Question.testFourSum">
+  <component name="RunManager" selected="JUnit.Question.testNext">
     <configuration name="Question" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -359,7 +416,7 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="Question.testLetter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Question.testNext" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.yyx.leetcode.*" />
@@ -371,7 +428,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.yyx.leetcode" />
       <option name="MAIN_CLASS_NAME" value="com.yyx.leetcode.Question" />
-      <option name="METHOD_NAME" value="testLetter" />
+      <option name="METHOD_NAME" value="testNext" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -384,7 +441,7 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="Question.testThreeSumClose" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Question.testSub" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.yyx.leetcode.*" />
@@ -396,7 +453,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.yyx.leetcode" />
       <option name="MAIN_CLASS_NAME" value="com.yyx.leetcode.Question" />
-      <option name="METHOD_NAME" value="testThreeSumClose" />
+      <option name="METHOD_NAME" value="testSub" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -492,18 +549,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.Question" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.Question.testThreeSumClose" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.Question.testLetter" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.Question.testGen" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.Question.testFourSum" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.Question.testGen" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.Question.testFourSum" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.Question.testSub" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.Question.testNext" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.Question.testFourSum" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.Question.testGen" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.Question.testLetter" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Question" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.Question.testThreeSumClose" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.Question.testNext" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.Question.testSub" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Question" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.Question.testFourSum" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.Question.testGen" />
       </list>
     </recent_temporary>
   </component>
@@ -529,44 +586,45 @@
       <workItem from="1512130254367" duration="14983000" />
       <workItem from="1512371289422" duration="3984000" />
       <workItem from="1512540782868" duration="38000" />
-      <workItem from="1512576875599" duration="2979000" />
+      <workItem from="1512576875599" duration="6813000" />
+      <workItem from="1512629073533" duration="13300000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Question_testFourSum - 2017.12.04 at 23h 12m 51s.xml">
-      <configuration name="Question.testFourSum" configurationId="JUnit" />
+    <history-entry file="Question_testNext - 2017.12.08 at 11h 33m 41s.xml">
+      <configuration name="Question.testNext" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Question_testGen - 2017.12.03 at 16h 08m 26s.xml">
-      <configuration name="Question.testGen" configurationId="JUnit" />
+    <history-entry file="Question_testNext - 2017.12.08 at 11h 35m 40s.xml">
+      <configuration name="Question.testNext" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Question_testGen - 2017.12.03 at 16h 12m 55s.xml">
-      <configuration name="Question.testGen" configurationId="JUnit" />
+    <history-entry file="Question_testNext - 2017.12.08 at 11h 35m 47s.xml">
+      <configuration name="Question.testNext" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Question_testLetter - 2017.12.01 at 21h 39m 58s.xml">
-      <configuration name="Question.testLetter" configurationId="JUnit" />
+    <history-entry file="Question_testNext - 2017.12.08 at 11h 37m 28s.xml">
+      <configuration name="Question.testNext" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Question_testLetter - 2017.12.01 at 21h 40m 46s.xml">
-      <configuration name="Question.testLetter" configurationId="JUnit" />
+    <history-entry file="Question_testNext - 2017.12.08 at 11h 41m 25s.xml">
+      <configuration name="Question.testNext" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Question_testLetter - 2017.12.01 at 22h 40m 53s.xml">
-      <configuration name="Question.testLetter" configurationId="JUnit" />
+    <history-entry file="Question_testNext - 2017.12.08 at 11h 41m 31s.xml">
+      <configuration name="Question.testNext" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Question_testLetter - 2017.12.01 at 22h 50m 58s.xml">
-      <configuration name="Question.testLetter" configurationId="JUnit" />
+    <history-entry file="Question_testNext - 2017.12.08 at 11h 54m 55s.xml">
+      <configuration name="Question.testNext" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Question_testLetter - 2017.12.01 at 22h 54m 07s.xml">
-      <configuration name="Question.testLetter" configurationId="JUnit" />
+    <history-entry file="Question_testNext - 2017.12.08 at 12h 42m 40s.xml">
+      <configuration name="Question.testNext" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Question_testLetter - 2017.12.01 at 22h 54m 27s.xml">
-      <configuration name="Question.testLetter" configurationId="JUnit" />
+    <history-entry file="Question_testNext - 2017.12.08 at 12h 43m 11s.xml">
+      <configuration name="Question.testNext" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Question_testThreeSumClose - 2017.11.29 at 23h 39m 46s.xml">
-      <configuration name="Question.testThreeSumClose" configurationId="JUnit" />
+    <history-entry file="Question_testNext - 2017.12.08 at 12h 43m 47s.xml">
+      <configuration name="Question.testNext" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99350000" />
+    <option name="totallyTimeSpent" value="116484000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="0" />
@@ -574,14 +632,15 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32844576" sideWeight="0.19628432" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32844576" sideWeight="0.680937" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32844576" sideWeight="0.7714055" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32844576" sideWeight="0.319063" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32844576" sideWeight="0.22859451" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32844576" sideWeight="0.4838449" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32844576" sideWeight="0.4806139" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26171243" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -590,13 +649,12 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.398827" sideWeight="0.46122777" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.398827" sideWeight="0.40387723" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32844576" sideWeight="0.2924071" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991204" sideWeight="0.49676898" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -618,91 +676,28 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/yyx/leetcode/Question.java</url>
-          <line>415</line>
+          <line>538</line>
           <properties />
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/yyx/leetcode/Question.java</url>
-          <line>410</line>
+          <line>533</line>
           <properties />
           <option name="timeStamp" value="26" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/yyx/leetcode/Question.java</url>
+          <line>100</line>
+          <properties />
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="31" />
+      <option name="time" value="63" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/yyx/leetcode/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/src.zip!/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4455">
-          <caret line="297" column="60" lean-forward="false" selection-start-line="297" selection-start-column="54" selection-end-line="297" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/yyx/leetcode/Question.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1205#1213#0" expanded="true" />
-            <element signature="e#2593#2604#0" expanded="true" />
-            <element signature="e#4369#4377#0" expanded="true" />
-            <element signature="e#6009#6024#0" expanded="true" />
-            <element signature="e#7676#7691#0" expanded="true" />
-            <element signature="e#9438#9453#0" expanded="true" />
-            <element signature="e#10569#10584#0" expanded="true" />
-            <element signature="e#10685#10694#0" expanded="true" />
-            <element signature="e#11577#11586#0" expanded="true" />
-            <element signature="e#12178#12193#0" expanded="true" />
-            <element signature="e#13325#13334#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="23" lean-forward="false" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/yyx/leetcode/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/yyx/leetcode/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/src.zip!/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4455">
@@ -728,17 +723,21 @@
           <caret line="28" column="8" lean-forward="false" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1205#1213#0" expanded="true" />
-            <element signature="e#2593#2604#0" expanded="true" />
-            <element signature="e#4369#4377#0" expanded="true" />
-            <element signature="e#6009#6024#0" expanded="true" />
-            <element signature="e#7676#7691#0" expanded="true" />
-            <element signature="e#9438#9453#0" expanded="true" />
-            <element signature="e#10569#10584#0" expanded="true" />
-            <element signature="e#10685#10694#0" expanded="true" />
-            <element signature="e#11577#11586#0" expanded="true" />
-            <element signature="e#12178#12193#0" expanded="true" />
-            <element signature="e#13325#13334#0" expanded="true" />
+            <element signature="e#4622#4630#0" expanded="true" />
+            <element signature="e#6010#6021#0" expanded="true" />
+            <element signature="e#7786#7794#0" expanded="true" />
+            <element signature="e#9426#9441#0" expanded="true" />
+            <element signature="e#11093#11108#0" expanded="true" />
+            <element signature="e#12855#12870#0" expanded="true" />
+            <element signature="e#13986#14001#0" expanded="true" />
+            <element signature="e#14102#14111#0" expanded="true" />
+            <element signature="e#14994#15003#0" expanded="true" />
+            <element signature="e#15595#15610#0" expanded="true" />
+            <element signature="e#16742#16751#0" expanded="true" />
+            <marker date="1512708406957" expanded="false" signature="7636:7647" ph=" { " />
+            <marker date="1512708406957" expanded="false" signature="7672:7678" ph=" }" />
+            <marker date="1512708406957" expanded="false" signature="19746:19757" ph=" { " />
+            <marker date="1512708406957" expanded="false" signature="19783:19789" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -821,17 +820,21 @@
           <caret line="49" column="47" lean-forward="false" selection-start-line="49" selection-start-column="47" selection-end-line="49" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1205#1213#0" expanded="true" />
-            <element signature="e#2593#2604#0" expanded="true" />
-            <element signature="e#4369#4377#0" expanded="true" />
-            <element signature="e#6009#6024#0" expanded="true" />
-            <element signature="e#7676#7691#0" expanded="true" />
-            <element signature="e#9438#9453#0" expanded="true" />
-            <element signature="e#10569#10584#0" expanded="true" />
-            <element signature="e#10685#10694#0" expanded="true" />
-            <element signature="e#11577#11586#0" expanded="true" />
-            <element signature="e#12178#12193#0" expanded="true" />
-            <element signature="e#13325#13334#0" expanded="true" />
+            <element signature="e#4622#4630#0" expanded="true" />
+            <element signature="e#6010#6021#0" expanded="true" />
+            <element signature="e#7786#7794#0" expanded="true" />
+            <element signature="e#9426#9441#0" expanded="true" />
+            <element signature="e#11093#11108#0" expanded="true" />
+            <element signature="e#12855#12870#0" expanded="true" />
+            <element signature="e#13986#14001#0" expanded="true" />
+            <element signature="e#14102#14111#0" expanded="true" />
+            <element signature="e#14994#15003#0" expanded="true" />
+            <element signature="e#15595#15610#0" expanded="true" />
+            <element signature="e#16742#16751#0" expanded="true" />
+            <marker date="1512708406957" expanded="false" signature="7636:7647" ph=" { " />
+            <marker date="1512708406957" expanded="false" signature="7672:7678" ph=" }" />
+            <marker date="1512708406957" expanded="false" signature="19746:19757" ph=" { " />
+            <marker date="1512708406957" expanded="false" signature="19783:19789" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -1012,25 +1015,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1969" column="41" lean-forward="false" selection-start-line="1969" selection-start-column="41" selection-end-line="1969" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/src.zip!/java/io/PrintStream.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="733" column="16" lean-forward="false" selection-start-line="733" selection-start-column="16" selection-end-line="733" selection-end-column="16" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yyx/leet/ReverseInt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="26" column="17" lean-forward="false" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -1053,50 +1042,135 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/src.zip!/java/util/Arrays.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="142" column="4" lean-forward="false" selection-start-line="142" selection-start-column="4" selection-end-line="142" selection-end-column="23" />
+        <state relative-caret-position="28290">
+          <caret line="1957" column="18" lean-forward="false" selection-start-line="1957" selection-start-column="18" selection-end-line="1957" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.10/junit-4.10.jar!/org/junit/runners/Suite.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
           <folding>
-            <element signature="e#5027#5028#0" expanded="false" />
-            <element signature="e#5098#5099#0" expanded="false" />
+            <element signature="e#2478#2479#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="17" column="21" lean-forward="false" selection-start-line="12" selection-start-column="7" selection-end-line="17" selection-end-column="21" />
+        <state relative-caret-position="180">
+          <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yyx/leet/ReverseInt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="26" column="17" lean-forward="false" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/src.zip!/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
+        <state relative-caret-position="15">
           <caret line="297" column="60" lean-forward="false" selection-start-line="297" selection-start-column="54" selection-end-line="297" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.10/junit-4.10.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.10/junit-4.10.jar!/org/junit/runners/model/FrameworkMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <element signature="e#728#922#0" expanded="true" />
+            <element signature="e#921#922#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.10/junit-4.10.jar!/org/junit/internal/runners/statements/InvokeMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.10/junit-4.10.jar!/org/junit/runners/BlockJUnit4ClassRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.10/junit-4.10.jar!/org/junit/runners/ParentRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="190" column="0" lean-forward="false" selection-start-line="190" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
+          <folding>
+            <element signature="e#1904#1905#0" expanded="true" />
+            <element signature="e#1956#1957#0" expanded="true" />
+            <element signature="e#4518#4653#0" expanded="true" />
+            <element signature="e#4652#4653#0" expanded="true" />
+            <element signature="e#4888#5036#0" expanded="true" />
+            <element signature="e#5035#5036#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.10/junit-4.10.jar!/org/junit/runner/JUnitCore.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1215">
+          <caret line="110" column="0" lean-forward="false" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/src.zip!/java/util/Arrays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="166" column="23" lean-forward="false" selection-start-line="166" selection-start-column="23" selection-end-line="166" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/yyx/leetcode/Question.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="18" column="4" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="42" selection-end-column="5" />
+        <state relative-caret-position="331">
+          <caret line="39" column="13" lean-forward="false" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1205#1213#0" expanded="true" />
-            <element signature="e#2593#2604#0" expanded="true" />
-            <element signature="e#4369#4377#0" expanded="true" />
-            <element signature="e#6009#6024#0" expanded="true" />
-            <element signature="e#7676#7691#0" expanded="true" />
-            <element signature="e#9438#9453#0" expanded="true" />
-            <element signature="e#10569#10584#0" expanded="true" />
-            <element signature="e#10685#10694#0" expanded="true" />
-            <element signature="e#11577#11586#0" expanded="true" />
-            <element signature="e#12178#12193#0" expanded="true" />
-            <element signature="e#13325#13334#0" expanded="true" />
+            <element signature="e#4622#4630#0" expanded="true" />
+            <element signature="e#6010#6021#0" expanded="true" />
+            <element signature="e#7786#7794#0" expanded="true" />
+            <element signature="e#9426#9441#0" expanded="true" />
+            <element signature="e#11093#11108#0" expanded="true" />
+            <element signature="e#12855#12870#0" expanded="true" />
+            <element signature="e#13986#14001#0" expanded="true" />
+            <element signature="e#14102#14111#0" expanded="true" />
+            <element signature="e#14994#15003#0" expanded="true" />
+            <element signature="e#15595#15610#0" expanded="true" />
+            <element signature="e#16742#16751#0" expanded="true" />
+            <marker date="1512708406957" expanded="false" signature="7636:7647" ph=" { " />
+            <marker date="1512708406957" expanded="false" signature="7672:7678" ph=" }" />
+            <marker date="1512708406957" expanded="false" signature="19746:19757" ph=" { " />
+            <marker date="1512708406957" expanded="false" signature="19783:19789" ph=" }" />
           </folding>
         </state>
       </provider>

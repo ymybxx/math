@@ -13,8 +13,131 @@ public class Question {
         int[] height = new int[]{1, 1};
         System.out.println();
         String s = "abcdefg";
-
     }
+
+
+
+    @Test
+    public void testNext() {
+        int[] nums = new int[]{1,3,2};
+        nextPermutation(nums);
+        System.out.println(Arrays.toString(nums));
+    }
+    public void nextPermutation(int[] nums) {
+        int length = nums.length;
+        for (int i = length - 2; i >= 0; i--) {
+            int in_index = -1;
+            int swap_index = -1;
+            //找到减少 i
+            if (nums[i] < nums[i + 1]) {
+                in_index = i;//递增点坐标
+                for (int j = i + 1;j < length; j++) {
+                    //找到减少点i 小的数
+                    if (nums[j] > nums[in_index]) {
+                        swap_index = j;
+                    }
+                }
+            }
+
+            if (in_index != -1 && swap_index != -1) {
+                //将两个坐标的数交换
+                int tmp = nums[in_index];
+                nums[in_index] = nums[swap_index];
+                nums[swap_index] = tmp;
+                //将后续的数组排序
+                Arrays.sort(nums, in_index + 1, length);
+                return;
+            }
+        }
+        Arrays.sort(nums);
+    }
+
+    public int searchInsert(int[] nums, int target) {
+
+        int i = 0;
+        for ( i = 0; i < nums.length; i++) {
+            if (nums[i] >= target) {
+                break;
+            }
+        }
+
+        return i;
+    }
+    @Test
+    public void testSub() {
+        String s = "12345";
+        System.out.println(divide(-2147483648,-2147483648));
+    }
+    public int divide(int dividend, int divisor) {
+
+        long dividend_long = dividend;
+        long divisor_long = divisor;
+        int flag = 1;
+        if (divisor_long == 0) {
+            return Integer.MAX_VALUE;
+        }
+        if (divisor_long < 0) {
+            divisor_long = -divisor_long;
+            flag = flag * -1;
+        }
+        //分子转化成字符串
+        String fenzi = String.valueOf(dividend_long);
+        //处理负号
+        if (fenzi.charAt(0) == '-') {
+            fenzi = fenzi.substring(1);
+            flag = flag *  -1;
+        }
+        //设置当前的左右游标
+        int left = 0;
+        int right = 1;
+        int length = fenzi.length();
+        StringBuffer sb = new StringBuffer();
+        int yu = 0;
+        while (right <= length) {
+            long now = Integer.parseInt(fenzi.substring(left,right));//将当前要计算的字符串转化为数字
+            now = now + yu * 10;
+            long sum = 0;
+            long result_now = 0;
+            while ((sum + divisor_long) <= now) {
+                sum += divisor_long;
+                result_now++;
+            }
+            yu = (int)(now - sum);
+            if (result_now == 0) {
+                if (yu != 0) {
+                    if (sb.length() != 0) {
+                        sb.append(0);
+                    }
+                    left = right;
+                    right++;
+
+                } else {
+                    sb.append(0);
+                    left = right;
+                    right ++;
+                }
+
+            } else {
+                sb.append(result_now);
+                left = right;
+                right ++;
+            }
+        }
+        if (sb.length() == 0) {
+            return  0;
+        }
+        Long result =  flag * Long.parseLong(sb.toString());
+        if (result > Integer.MAX_VALUE) {
+            return Integer.MAX_VALUE;
+        } else if (result < Integer.MIN_VALUE) {
+            return Integer.MIN_VALUE;
+        } else {
+            return result.intValue();
+        }
+    }
+
+
+
 
     public ListNode swapPairs(ListNode head) {
         if (head == null && head.next == null) {
