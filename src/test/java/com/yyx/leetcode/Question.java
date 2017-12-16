@@ -8,21 +8,96 @@ import java.util.*;
 public class Question {
 
 
-    static private Map<Integer,String> phoneNum;
+    static private Map<Integer, String> phoneNum;
+
     public static void main(String[] args) {
         int[] height = new int[]{1, 1};
         System.out.println();
         String s = "abcdefg";
     }
 
-
+    @Test
+    public void testFirstMissing() {
+        int[] nums = new int[]{3,4,-1,1};
+        System.out.println(firstMissingPositive(nums));
+    }
 
     @Test
+    public void testTrap() {
+        int[] nums = new int[]{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
+        System.out.println(trap(nums));
+    }
+    public int trap(int[] height) {
+        int l = 0;
+        int r = 0;
+        int min = 0;
+        int left = 0;
+        int water = 0;
+        int right = height.length - 1;
+        while (left < right) {
+            //获取当前两端的值
+            int ln = height[left];
+            int rn = height[right];
+            //如果以后后小于之前的高度
+            if (ln < l) {
+                if( ln < min) {
+                    water += min - ln;
+                    left++;
+                    continue;
+                }
+            }else {
+                l =ln;
+            }
+            if (rn < r) {
+                if(rn < min) {
+                    water += min - rn;
+                    right--;
+                    continue;
+                }
+            } else {
+                r = rn;
+            }
+            //左右两端比较小的
+            min = Math.min(l, r);
+            if (height[left] <= height[right]) {
+                left++;
+            } else {
+                right -- ;
+            }
+        }
+        return water;
+    }
+
+
+    public int firstMissingPositive(int[] nums) {
+        for (int i = 0; i < nums.length; ) {
+            int now = nums[i];
+            if (now <= 0 || now > nums.length || now == i + 1) { i++; continue;}//忽略情况
+            int ex = nums[now - 1];//正确位置上的数字
+            //两数字相等
+            if (ex == now) {i++; continue;}
+            //两数不相等则交换两数字
+            if (ex != now) {
+                nums[i] = ex;
+                nums[now - 1] = now;
+            }
+
+        }
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != i + 1) {
+                return i + 1;
+            }
+        }
+
+        return nums.length + 1;
+    }
+    @Test
     public void testNext() {
-        int[] nums = new int[]{1,3,2};
+        int[] nums = new int[]{3,4,-1,1};
         nextPermutation(nums);
         System.out.println(Arrays.toString(nums));
     }
+
     public void nextPermutation(int[] nums) {
         int length = nums.length;
         for (int i = length - 2; i >= 0; i--) {
@@ -31,7 +106,7 @@ public class Question {
             //找到减少 i
             if (nums[i] < nums[i + 1]) {
                 in_index = i;//递增点坐标
-                for (int j = i + 1;j < length; j++) {
+                for (int j = i + 1; j < length; j++) {
                     //找到减少点i 小的数
                     if (nums[j] > nums[in_index]) {
                         swap_index = j;
@@ -55,7 +130,7 @@ public class Question {
     public int searchInsert(int[] nums, int target) {
 
         int i = 0;
-        for ( i = 0; i < nums.length; i++) {
+        for (i = 0; i < nums.length; i++) {
             if (nums[i] >= target) {
                 break;
             }
@@ -63,11 +138,185 @@ public class Question {
 
         return i;
     }
+
     @Test
     public void testSub() {
         String s = "12345";
-        System.out.println(divide(-2147483648,-2147483648));
+        System.out.println(divide(-2147483648, -2147483648));
     }
+
+
+    @Test
+    public void testCombinatition() {
+        int[] test = new int[]{10, 1, 2, 7, 6, 1, 5};
+        System.out.println(combinationSum2(test,8));
+    }
+
+    public List<List<Integer>> combinationSum2(int[] candidates, int target) {
+        Arrays.sort(candidates);
+        List<List<Integer>> lists = new ArrayList<List<Integer>>();
+        combineSumTwo(candidates, 0, target, lists, null);
+        return lists;
+    }
+
+
+
+    public void combineSumTwo(int[] candidates, int begin,int target,List<List<Integer>> lists,List<Integer> list) {
+        for (int i = begin; i < candidates.length; i++) {
+            if (i > begin && candidates[i] == candidates[i - 1]) {
+                continue;
+            }
+            int now = candidates[i];
+            if (now == target) {
+                if (list == null) {
+                    list = new ArrayList<Integer>();
+                }
+                List<Integer> integerList = new ArrayList<Integer>(list);
+                integerList.add(now);
+                lists.add(integerList);
+                continue;
+
+            }
+            if (now * 2 <=  target) { //两倍的值小于目标值
+                if (list == null) {
+                    list = new ArrayList<Integer>();
+                }
+                List<Integer> integerList = new ArrayList<Integer>(list);
+                integerList.add(now);
+                combineSumTwo(candidates,i  + 1,target - now,lists,integerList);
+            }
+        }
+
+    }
+    public void combineSum(int[] candidates, int begin,int target,List<List<Integer>> lists,List<Integer> list) {
+        for (int i = begin; i < candidates.length; i++) {
+            if (i > 0 && candidates[i] == candidates[i - 1]) {
+                continue;
+            }
+            int now = candidates[i];
+            if (now == target) {
+                if (list == null) {
+                    list = new ArrayList<Integer>();
+                }
+                List<Integer> integerList = new ArrayList<Integer>(list);
+                integerList.add(now);
+                lists.add(integerList);
+                continue;
+
+            }
+            if (now * 2 <=  target) { //两倍的值小于目标值
+                if (list == null) {
+                    list = new ArrayList<Integer>();
+                }
+                List<Integer> integerList = new ArrayList<Integer>(list);
+                integerList.add(now);
+                combineSum(candidates,i,target - now,lists,integerList);
+            }
+        }
+
+    }
+
+    public void count(int n) {
+
+
+        if (n == 1) {
+            s = "1";
+            return;
+        }
+
+        count(n - 1);
+        StringBuffer sb = new StringBuffer();
+        char ch = s.charAt(0);
+        int times = 1;
+        for (int i = 1; i < s.length(); i++) {
+            if (s.charAt(i) == ch) {
+                times++;
+            } else {
+                sb.append(times).append(ch);
+                ch = s.charAt(i);
+                times = 1;
+            }
+        }
+        sb.append(times).append(ch);
+        s = sb.toString();
+
+
+    }
+
+    static String s = "";
+    public String countAndSay(int n) {
+        count(n);
+        return s;
+    }
+
+    @Test
+    public void testCountAndSay() {
+        String s = countAndSay(15);
+        System.out.println(s);
+    }
+
+    @Test
+    public void testSearch() {
+        int[] nums = new int[]{1, 3};
+        int r = search(nums, 2);
+        System.out.println(r);
+    }
+
+    public int search(int[] nums, int target) {
+
+        int length = nums.length;
+        if (length == 0) return -1;
+        if (length == 1) {
+            if (nums[0] == target) return 0;
+            else return -1;
+        }
+        int rot = -1;
+        int left;
+        int right;
+        int mid;
+        //找出拐点
+        for (int i = 1; i < length; i++) {
+            if (nums[i] < nums[i - 1]) {
+                rot = i;
+            }
+        }
+        //没有拐点
+        if (rot == -1) {
+            left = 0;
+            right = length - 1;
+            mid = (left + right) / 2;
+        } else {
+            //目标比拐点前一个数大或者比拐点数小
+            if (target > nums[rot - 1] || target < nums[rot]) {
+                return -1;
+            }
+            //目标大于首元素
+            if (target >= nums[0]) {
+                left = 0;
+                right = rot - 1;
+                mid = (left + right) / 2;
+            } else {
+                left = rot;
+                right = length - 1;
+                mid = (left + right) / 2;
+            }
+        }
+
+        while (left <= right) {
+            if (nums[mid] == target) {
+                return mid;
+            }
+            if (target < nums[mid]) {
+                right = mid - 1;
+                mid = (left + right) / 2;
+            } else {
+                left = mid + 1;
+                mid = (left + right) / 2;
+            }
+        }
+        return -1;
+    }
+
     public int divide(int dividend, int divisor) {
 
         long dividend_long = dividend;
@@ -85,7 +334,7 @@ public class Question {
         //处理负号
         if (fenzi.charAt(0) == '-') {
             fenzi = fenzi.substring(1);
-            flag = flag *  -1;
+            flag = flag * -1;
         }
         //设置当前的左右游标
         int left = 0;
@@ -94,7 +343,7 @@ public class Question {
         StringBuffer sb = new StringBuffer();
         int yu = 0;
         while (right <= length) {
-            long now = Integer.parseInt(fenzi.substring(left,right));//将当前要计算的字符串转化为数字
+            long now = Integer.parseInt(fenzi.substring(left, right));//将当前要计算的字符串转化为数字
             now = now + yu * 10;
             long sum = 0;
             long result_now = 0;
@@ -102,7 +351,7 @@ public class Question {
                 sum += divisor_long;
                 result_now++;
             }
-            yu = (int)(now - sum);
+            yu = (int) (now - sum);
             if (result_now == 0) {
                 if (yu != 0) {
                     if (sb.length() != 0) {
@@ -114,19 +363,19 @@ public class Question {
                 } else {
                     sb.append(0);
                     left = right;
-                    right ++;
+                    right++;
                 }
 
             } else {
                 sb.append(result_now);
                 left = right;
-                right ++;
+                right++;
             }
         }
         if (sb.length() == 0) {
-            return  0;
+            return 0;
         }
-        Long result =  flag * Long.parseLong(sb.toString());
+        Long result = flag * Long.parseLong(sb.toString());
         if (result > Integer.MAX_VALUE) {
             return Integer.MAX_VALUE;
         } else if (result < Integer.MIN_VALUE) {
@@ -135,8 +384,6 @@ public class Question {
             return result.intValue();
         }
     }
-
-
 
 
     public ListNode swapPairs(ListNode head) {
@@ -171,23 +418,24 @@ public class Question {
         List<String> list = generateParenthesis(3);
         System.out.println(list);
     }
+
     public List<String> generateParenthesis(int n) {
         List<String> list = new ArrayList<String>();
         String s = "";
-        genPar(list, s,n, n);
+        genPar(list, s, n, n);
         return list;
     }
 
-    public void  genPar(List<String> re,String s, int left, int right) {
-       if(left == 0 && right ==0){
-           re.add(s);
-       }
+    public void genPar(List<String> re, String s, int left, int right) {
+        if (left == 0 && right == 0) {
+            re.add(s);
+        }
 
         if (left > 0) {
-            genPar(re,s + "(",left - 1, right);
+            genPar(re, s + "(", left - 1, right);
         }
         if (right > left) {
-            genPar(re,s + ")", left,right-1);
+            genPar(re, s + ")", left, right - 1);
         }
     }
 
@@ -220,8 +468,8 @@ public class Question {
     }
 
     public void addNode(ListNode listNode, int value) {
-            ListNode newNode = new ListNode(value);
-            listNode.next = listNode;
+        ListNode newNode = new ListNode(value);
+        listNode.next = listNode;
     }
 
     public boolean isValid(String s) {
@@ -229,22 +477,20 @@ public class Question {
         List<Character> list = new ArrayList<Character>();
         for (char word : words) {
             int size = list.size();
-            if(word == '(' || word =='[' || word =='{') list.add(word);
+            if (word == '(' || word == '[' || word == '{') list.add(word);
             else if (word == ')') {
                 if (list.get(size - 1) == ')') {
                     list.remove(size - 1);
                 } else {
                     return false;
                 }
-            }
-            else if (word == '}') {
+            } else if (word == '}') {
                 if (list.get(size - 1) == '}') {
-                    list.remove(size -1 );
+                    list.remove(size - 1);
                 } else {
                     return false;
                 }
-            }
-            else if (word == ']') {
+            } else if (word == ']') {
                 if (list.get(size - 1) == ']') {
                     list.remove(size - 1);
                 } else {
@@ -260,13 +506,14 @@ public class Question {
 
     }
 
-      public class ListNode
-      {
-          int val;
-          ListNode next;
-          ListNode(int x) { val = x; }
-      }
+    public class ListNode {
+        int val;
+        ListNode next;
 
+        ListNode(int x) {
+            val = x;
+        }
+    }
 
 
     public ListNode removeNthFromEnd(ListNode head, int n) {
@@ -278,11 +525,10 @@ public class Question {
         }
         p = head;
         int num = length - n;
-        int tmp =0;
+        int tmp = 0;
         if (num == 0) {
             head = head.next;
-        }
-        else {
+        } else {
             while (tmp < num - 1) {
                 p = p.next;
                 tmp++;
@@ -296,12 +542,19 @@ public class Question {
     public void testLetter() {
         letterCombinations("32");
     }
+
     public List<String> letterCombinations(String digits) {
         List<String> resultList = new ArrayList<String>();
         //初始化号码对应的英文字母
         String[] phoneDic = new String[10];
-        phoneDic[2] = "abc";phoneDic[3] = "def";phoneDic[4] = "ghi";phoneDic[5] = "jkl";
-        phoneDic[6] = "mno";phoneDic[7] = "pqrs";phoneDic[8] = "tuv";phoneDic[9] = "wxyz";
+        phoneDic[2] = "abc";
+        phoneDic[3] = "def";
+        phoneDic[4] = "ghi";
+        phoneDic[5] = "jkl";
+        phoneDic[6] = "mno";
+        phoneDic[7] = "pqrs";
+        phoneDic[8] = "tuv";
+        phoneDic[9] = "wxyz";
         //获取参数的个数
         char[] phoneNumberChars = digits.toCharArray();
         int size = phoneNumberChars.length;
@@ -310,7 +563,7 @@ public class Question {
         //第一个输入号码对应的字符数组,依次填入集合
         char[] phoneFirst = phoneDic[phoneNumberChars[0] - '0'].toCharArray();
         for (char ch : phoneFirst
-             ) {
+                ) {
             resultList.add(String.valueOf(ch));
         }
         //结果中每个元素的长度
@@ -324,7 +577,7 @@ public class Question {
             int numberInt = number - '0';
             //获取数字对应的字母字典
             char[] phoneDicChr = phoneDic[numberInt].toCharArray();
-            reLength ++;
+            reLength++;
             while (resultList.get(0).length() < reLength) {
                 for (char word : phoneDicChr) {
                     String tmp = resultList.get(0) + String.valueOf(word);
@@ -337,6 +590,7 @@ public class Question {
         System.out.println(resultList);
         return resultList;
     }
+
     @Test
     public void testMaxArea() {
         int[] height = new int[]{1, 1, 2, 3, 1, 2, 1, 2, 4, 1, 2, 2, 1, 1};
@@ -347,7 +601,7 @@ public class Question {
     @Test
     public void testThreeSum() {
         List<List<Integer>> lists = new ArrayList<List<Integer>>();
-        int[] nums = new int[]{-4,-2,1,-5,-4,-4,4,-2,0,4,0,-2,3,1,-5,0};
+        int[] nums = new int[]{-4, -2, 1, -5, -4, -4, 4, -2, 0, 4, 0, -2, 3, 1, -5, 0};
         //-5 -5 -4 -4 -4 -2 -2 -2 0 0 1 1 3  4 4
         lists = threeSum3(nums);
         System.out.println(lists);
@@ -355,13 +609,13 @@ public class Question {
     }
 
 
-
     @Test
     public void testThreeSumClose() {
-        int arr[] = new int[]{-1,2,1,-4};
+        int arr[] = new int[]{-1, 2, 1, -4};
         int re = threeSumClosest(arr, 1);
         System.out.println(re);
     }
+
     public int threeSumClosest(int[] nums, int target) {
         Arrays.sort(nums);
         int length = nums.length;
@@ -382,13 +636,13 @@ public class Question {
                     while (left < right && nums[right - 1] == nums[right]) right--;
                     right--;
                 } else {
-                    while(left < right && nums[left + 1] == nums[left]) left++;
+                    while (left < right && nums[left + 1] == nums[left]) left++;
                     left++;
                 }
 
             }
         }
-        return target+close;
+        return target + close;
 
     }
 
@@ -404,45 +658,47 @@ public class Question {
         List<List<Integer>> lists = new ArrayList<List<Integer>>();
         Arrays.sort(nums);
         int length = nums.length;
-        for(int i = 0; i < length; i++) {
-            if(i > 0 && nums[i] == nums[i - 1]) continue;
+        for (int i = 0; i < length; i++) {
+            if (i > 0 && nums[i] == nums[i - 1]) continue;
 
             int left = i + 1;
             int right = length - 1;
-            threeSumdForFour(lists,nums,left,right,nums[i],target);
+            threeSumdForFour(lists, nums, left, right, nums[i], target);
         }
         return lists;
     }
 
 
-    public void threeSumdForFour(List<List<Integer>> lists,int[] nums, int begin, int end, int first,int target) {
+    public void threeSumdForFour(List<List<Integer>> lists, int[] nums, int begin, int end, int first, int target) {
         int length = end + 1;
         //
 
         for (int i = begin; i < length - 1; i++) {
-            if (i > begin && nums[i] == nums[i-1]) continue;
-            int left = i+1, right = length - 1;
+            if (i > begin && nums[i] == nums[i - 1]) continue;
+            int left = i + 1, right = length - 1;
             int current = target - first - nums[i];
             while (left < right) {
                 //-1 -2 -2 -4 0 1 2 2 3 4
                 if (nums[left] + nums[right] == current) {
-                    lists.add(Arrays.asList(first,nums[i], nums[left], nums[right]));
-                    while ( left <right && nums[left] == nums[left+1] ) left++;
-                    while(left < right && nums[right] == nums[right-1] ) right--;
+                    lists.add(Arrays.asList(first, nums[i], nums[left], nums[right]));
+                    while (left < right && nums[left] == nums[left + 1]) left++;
+                    while (left < right && nums[right] == nums[right - 1]) right--;
                     left++;
                     right--;
                 } else if (nums[left] + nums[right] < current) {
-                    while ( left <right && nums[left] == nums[left+1] ) left++;
+                    while (left < right && nums[left] == nums[left + 1]) left++;
                     left++;
                 } else {
-                    while(left < right && nums[right] == nums[right-1] ) right--;
+                    while (left < right && nums[right] == nums[right - 1]) right--;
                     right--;
                 }
             }
         }
     }
+
     /**
      * 参考后精简
+     *
      * @param nums
      * @return
      */
@@ -453,22 +709,22 @@ public class Question {
         //
         List<List<Integer>> lists = new ArrayList<List<Integer>>();
         for (int i = 0; i < length - 1; i++) {
-            if (i > 0 && nums[i] == nums[i-1]) continue;
-            int left = i+1, right = length - 1;
+            if (i > 0 && nums[i] == nums[i - 1]) continue;
+            int left = i + 1, right = length - 1;
             int current = -nums[i];
             while (left < right) {
-                    //-1 -2 -2 -4 0 1 2 2 3 4
+                //-1 -2 -2 -4 0 1 2 2 3 4
                 if (nums[left] + nums[right] == current) {
                     lists.add(Arrays.asList(-current, nums[left], nums[right]));
-                    while ( left <right && nums[left] == nums[left+1] ) left++;
-                    while(left < right && nums[right] == nums[right-1] ) right--;
+                    while (left < right && nums[left] == nums[left + 1]) left++;
+                    while (left < right && nums[right] == nums[right - 1]) right--;
                     left++;
                     right--;
                 } else if (nums[left] + nums[right] < current) {
-                    while ( left <right && nums[left] == nums[left+1] ) left++;
+                    while (left < right && nums[left] == nums[left + 1]) left++;
                     left++;
                 } else {
-                    while(left < right && nums[right] == nums[right-1] ) right--;
+                    while (left < right && nums[right] == nums[right - 1]) right--;
                     right--;
                 }
             }
