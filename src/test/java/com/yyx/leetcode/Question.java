@@ -1,6 +1,5 @@
 package com.yyx.leetcode;
 
-import com.sun.xml.internal.xsom.impl.scd.Iterators;
 import org.junit.Test;
 
 import java.util.*;
@@ -10,10 +9,86 @@ public class Question {
 
     static private Map<Integer, String> phoneNum;
 
+
+
     public static void main(String[] args) {
-        int[] height = new int[]{1, 1};
-        System.out.println();
-        String s = "abcdefg";
+
+        MinStack minStack = new MinStack();
+        minStack.push(2);
+        minStack.push(1);
+        System.out.println(minStack.getMin());
+    }
+
+    static  class MinStack {
+
+
+        Map<Integer,Integer> minMap = new TreeMap<Integer, Integer>();
+        Stack<Integer> stack = new Stack<Integer>();
+
+        /*
+         * initialize your data structure here.
+         */
+        public MinStack() {
+
+        }
+
+
+
+
+
+
+
+
+        public boolean isSymmetric(TreeNode root) {
+            if (root == null) {
+                return true;
+            }
+            return isSy(root.left, root.right);
+        }
+        public boolean isSy(TreeNode left, TreeNode right) {
+
+            if (left == null && right == null) {
+                return true;
+            }
+
+            if (left == null || right == null) {
+                return false;
+            }
+            if (left.val != right.val) {
+                return false;
+            }
+            return (isSy(left.left, right.right) && isSy(left.right, right.left));
+
+
+        }
+        public void push(int x) {
+            stack.push(x);
+            if (minMap.containsKey(x) == false) {
+                minMap.put(x, 1);
+            } else {
+                minMap.put(x, minMap.get(x) + 1);
+            }
+
+        }
+
+        public void pop() {
+            int tmp = stack.pop();
+            if (minMap.get(tmp) == 1) {
+                minMap.remove(tmp);
+            } else {
+                minMap.put(tmp, minMap.get(tmp) - 1);
+            }
+        }
+
+        public int top() {
+            return stack.peek();
+        }
+
+        public int getMin() {
+            return minMap.entrySet().iterator().next().getKey();
+
+
+        }
     }
 
     @Test
@@ -27,6 +102,48 @@ public class Question {
         int[] nums = new int[]{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
         System.out.println(trap(nums));
     }
+
+    public boolean hasPathSum(TreeNode root, int sum) {
+        if (root == null) {
+            return false;
+        }
+        if (root.left == null && root.right == null && sum - root.val == 0) {
+            return true;
+        }
+        return (hasPathSum(root.left, sum - root.val) || hasPathSum(root.right, sum - root.val));
+    }
+        public boolean hasPathSum2(TreeNode root, int sum) {
+            if (root == null) return false;
+            int now = 0;
+            Queue<TreeNode> queue = new LinkedList<TreeNode>();
+            Set<TreeNode> nodeSet = new TreeSet<TreeNode>();
+
+            queue.add(root);
+            TreeNode node = null;
+            while ((node = queue.peek()) != null) {
+                //当前node
+                now += node.val;//获取新值
+                if (now == sum) {
+                    return true;
+                }
+                //如果set中不存在则加入set中标记
+                if (nodeSet.contains(node)) {
+                    nodeSet.add(node);
+                }
+                //如果有左节点未进入则把左节点加入队列
+                if (node.left != null && nodeSet.contains(node.left) == false) {
+                    queue.add(node.left);
+                } else if (node.right != null && nodeSet.contains(node.right) == false) {
+                    queue.add(node.left);
+                } else {
+                    now -= node.val;
+                    queue.poll();
+                }
+
+            }
+            return false;
+        }
+
     public int trap(int[] height) {
         int l = 0;
         int r = 0;
@@ -67,6 +184,67 @@ public class Question {
         }
         return water;
     }
+
+
+
+
+    public List<Integer> inorderTraversal(TreeNode root) {
+        List<Integer> list = new ArrayList<Integer>();
+        inOrder(list, root);
+        return list;
+    }
+
+    public void inOrder(List<Integer> list, TreeNode cur) {
+        if (cur != null) {
+            inOrder(list,cur.left);
+            list.add(cur.val);
+            inOrder(list,cur.right);
+
+        }
+    }
+
+    @Test
+    public void testChangeInteger() {
+        Integer integer = new Integer(2);
+        testInteger(integer);
+        System.out.println(integer);
+
+    }
+    public void testInteger(Integer integer) {
+        integer = 1;
+    }
+
+
+    @Test
+    public void testNumTree() {
+        System.out.println(numTrees(3));
+
+    }
+
+
+
+    public int numTrees(int n) {
+        if (n == 1 || n == 0) {
+            return 1;
+        }
+       int[] re  = new int[n + 1];
+       re[0] = 1;
+       for (int i = 1; i <= n; i++) {
+            for (int j = 0; j < i; j++) {
+                re[i] += re[j] * re[i - 1 - j];
+            }
+        }
+        return re[n];
+    }
+
+
+
+     class TreeNode {
+         int val;
+          TreeNode left;
+          TreeNode right;
+        TreeNode(int x) { val = x; }
+     }
 
 
     public int firstMissingPositive(int[] nums) {
@@ -145,7 +323,33 @@ public class Question {
         System.out.println(divide(-2147483648, -2147483648));
     }
 
+    @Test
+    public void testCanJump() {
+        int[] nums = new int[]{2,3,1,1,4};
+        System.out.println(canJump(nums));
+    }
 
+    public boolean canJump(int[] nums) {
+        int i = 0;
+        int length = nums.length;
+        while (i < length) {
+            if (nums[i] == 0) return false;
+            int next_index = i + nums[i];
+            if (next_index >= length - 1) {
+                return true;
+            }
+            int maxStep = next_index + nums[next_index];//最远步数
+            int maxIndex = next_index;
+            for (int j = i + 1; j < next_index; j++) {
+                if (j + nums[j] > maxStep) {
+                    maxStep = j + nums[j];
+                    maxIndex = j;
+                }
+            }
+            i = maxIndex;
+        }
+        return true;
+    }
     @Test
     public void testCombinatition() {
         int[] test = new int[]{10, 1, 2, 7, 6, 1, 5};
